@@ -1,1 +1,35 @@
 # 14Nov2022
+
+Installing Latest Docker CE on Ubuntu:
+
+Update Ubuntu Libraries
+```
+sudo apt-get update
+```
+
+
+Install Latest version of Docker CE
+```
+sudo apt-get install docker.io
+```
+Check if docker service is running
+```
+sudo systemctl status docker
+```
+If not running, start it
+```
+sudo systemctl start docker
+```
+Add ubuntu user rps to docker user group
+```
+sudo usermod -aG docker rps
+```
+Open a new Terminal (duplicate Putty session)
+Check if docker is running
+```
+docker version
+```
+Run Docker hello-world image
+```
+docker run -it hello-world
+```
