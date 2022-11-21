@@ -58,16 +58,16 @@ kubectl get po --all-namespaces
 Let us run a sample deployment & check our set up
 ```
 kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080
-kubectl expose deployment hello-minikube  --type=NodePort
+kubectl expose pod hello-minikube  --type=NodePort
 
 kubectl get pod
 minikube service hello-minikube 
 ```
 
 This will open up a web browser and hit the service URL
-If everything is OK, let us delete our deployment & service
+If everything is OK, let us delete our pod & service
 ```
-kubectl delete deployment hello-minikube
+kubectl delete po hello-minikube
 kubectl delete svc hello-minikube
 ```
 
